@@ -17,7 +17,6 @@ X_train_c, X_test_c, y_train_c, y_test_c = train_test_split(X_class, Y_class, te
 
 clf = GradientBoostingClassifier(n_estimators=10000, learning_rate=0.1,
     max_depth=10, random_state=0).fit(X_train_c, y_train_c)
-clf.fit(X_train_c, y_train_c)
 clf.score(X_test_c, y_test_c)
 
 y_pred_class = clf.predict(X_test_c)
